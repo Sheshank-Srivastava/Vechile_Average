@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">CalVehicleAverage</string>
+    <string name="app_name">Vehicle Average</string>
+    <string name="litre">Litre</string>
+    <string name="kilometer">Number Of Kilometer</string>
+    <string name="cal_avg">Calculate Avg.</string>
+    <string name="your_average">Your Average</string>
 </resources>
