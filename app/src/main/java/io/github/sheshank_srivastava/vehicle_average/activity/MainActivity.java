@@ -38,37 +38,10 @@ public class MainActivity extends AppCompatActivity {
         edit_Litre = findViewById(R.id.editLitre);
         btn_Calculate = findViewById(R.id.btnCalculate);
 
-        showData();
-
-
-        btn_Calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (edit_KiloMeter.getText().toString().equals("") || edit_Litre.getText().toString().equals(""))
-                    return;
-
-                long current_kilometer = Integer.parseInt(edit_KiloMeter.getText().toString());
-                float current_fuel = Float.parseFloat(edit_Litre.getText().toString());
-                float current_average = current_kilometer / current_fuel;
-                DecimalFormat decimal = new DecimalFormat(".###");
-
-                String label_average = decimal.format(current_average);
-
-                txt_CurrentAverage.setText(label_average);
-                manager.saveData(current_kilometer, current_fuel);
-            }
-        });
 
     }
 
-    private void showData() {
-        if (true){
-            Toast.makeText(instance, "Welcome, We got you data", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        txt_CurrentAverage.setText(manager.getCurrentAverage()+"");
 
-    }
 
 
 }

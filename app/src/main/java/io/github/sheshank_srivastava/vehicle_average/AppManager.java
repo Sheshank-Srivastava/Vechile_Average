@@ -26,6 +26,7 @@ public class AppManager extends Application {
     public void onCreate() {
         super.onCreate();
         manager = this;
+
         readBackUp();
     }
 
@@ -39,10 +40,10 @@ public class AppManager extends Application {
 
     private void readBackUp() {
         preferences = getSharedPreferences("calculator_average", Context.MODE_PRIVATE);
-        mOldKiloMeter = preferences.getLong(Constants.OLD_KILOMETER, 0);
-        total_litre = preferences.getFloat(Constants.TOTAL_FUEL, 0.0f);
-        mCurrentAverage = preferences.getFloat(Constants.CURRENT_AVERAGE, 0.0f);
+
+
     }
+
 
     public void saveData(long kilometer, float fuel) {
         total_litre = preferences.getFloat(Constants.TOTAL_FUEL, 0.0f);
@@ -53,7 +54,7 @@ public class AppManager extends Application {
         editor.putFloat(Constants.TOTAL_FUEL, total_fuel);
         editor.apply();
 
-        if (mOldKiloMeter == 0.0f){
+        if (mOldKiloMeter == 0.0f) {
 
         }
     }
